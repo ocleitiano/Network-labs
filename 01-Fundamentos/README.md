@@ -2,77 +2,147 @@
 
 ## Sobre
 
-Esta seção reúne os principais conceitos fundamentais de Redes de Computadores.
+Esta seção reúne toda a base teórica utilizada ao longo dos meus estudos em Redes de Computadores e Segurança da Informação.
 
-O objetivo é construir uma base sólida antes de avançar para laboratórios práticos, projetos de infraestrutura e estudos em Segurança da Informação.
-
-Todo o conteúdo foi desenvolvido durante minha jornada de aprendizado, sendo constantemente atualizado conforme adquiro novos conhecimentos e experiências.
+O objetivo é documentar minha evolução, consolidar conceitos fundamentais e criar uma referência para consultas futuras e para aplicação prática em laboratórios.
 
 ---
 
 # 🎯 Objetivos
 
-- Consolidar os fundamentos de Redes de Computadores.
-- Documentar meu processo de aprendizagem.
-- Criar um material de consulta para revisões futuras.
-- Relacionar teoria com laboratórios práticos.
-- Construir uma base para estudos de Firewalls, NOC, Engenharia de Redes e Segurança da Informação.
+- Construir uma base sólida em Redes de Computadores.
+- Documentar o processo de aprendizagem.
+- Relacionar teoria e prática através de laboratórios.
+- Evoluir para tecnologias de Switching, Routing, Firewalls e Segurança.
 
 ---
 
 # 📖 Conteúdo
 
-| Status | Tema |
-|:------:|------|
-| ⬜ | O que é uma Rede de Computadores |
-| ⬜ | Modelo OSI |
-| ⬜ | Modelo TCP/IP |
-| ⬜ | Encapsulamento |
-| ⬜ | Endereçamento IP |
-| ⬜ | Subnetting |
-| ⬜ | MAC Address e ARP |
-| ⬜ | DHCP |
-| ⬜ | DNS |
-| ⬜ | ICMP |
-| ⬜ | TCP e UDP |
-| ⬜ | Portas de Rede |
-| ⬜ | Equipamentos de Rede |
-| ⬜ | VLANs |
-| ⬜ | Roteamento |
-| ⬜ | NAT |
-| ⬜ | ACL |
-| ⬜ | VPN |
-| ⬜ | Firewalls |
-| ⬜ | Segurança de Redes |
+## 1. Introdução e Fundamentos de Redes
+
+- ⬜ O que é rede de computadores
+- ⬜ Modelo OSI (camadas, funções e exemplos)
+- ⬜ Modelo TCP/IP
+- ⬜ Encapsulamento e fluxo de dados
+- ⬜ Broadcast, Unicast e Multicast
+- ⬜ Endereçamento IPv4
+- ⬜ Máscaras de rede e CIDR
+- ⬜ Subnetting passo a passo
+- ⬜ Introdução ao IPv6
+- ⬜ Ferramentas básicas (Ping, Traceroute, ARP e IPConfig)
 
 ---
 
-# 📌 Organização
+## 2. Equipamentos e Arquitetura LAN
 
-Cada tópico possui sua própria pasta contendo:
-
-- Explicações teóricas
-- Diagramas e imagens
-- Exemplos práticos
-- Comandos importantes
-- Boas práticas
-- Laboratórios relacionados
-- Referências utilizadas
+- ⬜ Função de switches e roteadores
+- ⬜ MAC Address
+- ⬜ Funcionamento da tabela MAC
+- ⬜ Estrutura de uma LAN (Acesso, Distribuição e Core)
+- ⬜ Interfaces
+- ⬜ VLANs
 
 ---
 
-# 🚀 Próximos Passos
+## 3. Switching
 
-Após concluir os fundamentos, os conhecimentos serão aplicados em laboratórios práticos utilizando ferramentas como:
+- ⬜ Conceitos de Switching
+- ⬜ VLANs
+- ⬜ Criação e segmentação de VLANs
+- ⬜ Trunk 802.1Q
+- ⬜ VLAN Nativa
+- ⬜ Inter-VLAN Routing
+- ⬜ SVI
+- ⬜ Router-on-a-Stick
+
+---
+
+## 4. Roteamento
+
+- ⬜ Conceitos de roteamento
+- ⬜ Roteamento estático
+- ⬜ Rota Default
+- ⬜ Tabela de Roteamento
+- ⬜ Adjacência
+- ⬜ Next-Hop
+
+---
+
+## 5. OSPF e BGP
+
+- ⬜ Funcionamento do OSPF
+- ⬜ Single Area
+- ⬜ Router-ID
+- ⬜ Estados de vizinhança
+- ⬜ Métrica (Custo)
+- ⬜ Funcionamento do BGP
+- ⬜ Troubleshooting básico
+
+---
+
+## 6. Serviços de Rede
+
+- ⬜ DHCP
+- ⬜ DHCP Server
+- ⬜ DHCP Relay
+- ⬜ DNS
+- ⬜ NTP
+- ⬜ NAT
+- ⬜ PAT
+
+---
+
+## 7. Segurança
+
+- ⬜ Hardening básico
+- ⬜ AAA
+- ⬜ ACLs
+- ⬜ Port Security
+
+---
+
+## 8. Wireless
+
+- ⬜ Bandas Wi-Fi
+- ⬜ SSID
+- ⬜ Canais
+- ⬜ Potência
+- ⬜ WPA2 e WPA3
+- ⬜ Wireless LAN Controller (WLC)
+
+---
+
+## 9. Revisão e Laboratórios
+
+- ⬜ Revisão de IPv4 e Subnetting
+- ⬜ Revisão de VLANs
+- ⬜ Revisão de Trunk
+- ⬜ Revisão de Inter-VLAN
+- ⬜ Revisão de OSPF
+- ⬜ Revisão de ACLs
+- ⬜ Simulado Geral
+- ⬜ Laboratórios Práticos
+
+---
+
+# 🛠 Ferramentas Utilizadas
 
 - Cisco Packet Tracer
 - PNETLab
 - Wireshark
+- Windows
 - Linux
-- Check Point
-- FortiGate
-- VirtualBox
+- Cisco IOS
+- Git
+- GitHub
 
 ---
 
-> "A teoria explica como funciona. A prática mostra como aplicar."
+# 📈 Progresso
+
+Conforme cada conteúdo for estudado e documentado, o status será atualizado e complementado com laboratórios práticos, diagramas, comandos e exemplos reais.
+
+---
+
+> "O conhecimento só se consolida quando a teoria é aplicada na prática."
