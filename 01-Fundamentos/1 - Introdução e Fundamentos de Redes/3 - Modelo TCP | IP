@@ -1,1 +1,213 @@
+# Modelo TCP/IP
+
+## O que é?
+
+O **Modelo TCP/IP (Transmission Control Protocol / Internet Protocol)** é o conjunto de protocolos utilizado para permitir a comunicação entre dispositivos em redes, incluindo a Internet.
+
+Diferente do Modelo OSI, que é um modelo conceitual com 7 camadas, o **TCP/IP é o modelo utilizado na prática**, sendo a base das redes modernas.
+
+---
+
+# Objetivos
+
+* Permitir a comunicação entre dispositivos.
+* Padronizar a transmissão de dados em redes.
+* Garantir o endereçamento e o roteamento dos dados.
+* Possibilitar a comunicação entre redes diferentes.
+
+---
+
+# As 4 Camadas do Modelo TCP/IP
+
+## 4. Aplicação (Application)
+
+**Função:** Fornece serviços de rede às aplicações utilizadas pelo usuário.
+
+**Responsabilidades:**
+
+* Comunicação entre aplicações e a rede.
+* Compartilhamento de arquivos.
+* Navegação na Internet.
+* Envio e recebimento de e-mails.
+
+**Protocolos:**
+
+* HTTP
+* HTTPS
+* FTP
+* SMTP
+* POP3
+* IMAP
+* DNS
+* DHCP
+* SSH
+* Telnet
+
+**PDU:** Dados
+
+---
+
+## 3. Transporte (Transport)
+
+**Função:** Garante a comunicação entre origem e destino.
+
+**Responsabilidades:**
+
+* Segmentação dos dados.
+* Controle de fluxo.
+* Controle de erros.
+* Multiplexação por portas.
+* Confiabilidade da comunicação (TCP).
+
+### Protocolos
+
+### TCP (Transmission Control Protocol)
+
+Características:
+
+* Orientado à conexão.
+* Confiável.
+* Garante a entrega dos dados.
+* Realiza retransmissão em caso de perda.
+* Utiliza confirmação (ACK).
+* Mais lento devido aos mecanismos de controle.
+
+**Exemplos de uso:**
+
+* HTTP/HTTPS
+* SSH
+* FTP
+* SMTP
+
+### UDP (User Datagram Protocol)
+
+Características:
+
+* Não orientado à conexão.
+* Não garante a entrega.
+* Não realiza retransmissão.
+* Menor atraso (baixa latência).
+* Mais rápido que o TCP.
+
+**Exemplos de uso:**
+
+* Streaming de vídeo.
+* Chamadas VoIP.
+* Jogos online.
+* DNS.
+
+**PDU:**
+
+* Segmento (TCP)
+* Datagrama (UDP)
+
+---
+
+## 2. Internet (Internet)
+
+**Função:** Responsável pelo endereçamento lógico e pelo roteamento dos pacotes entre diferentes redes.
+
+**Responsabilidades:**
+
+* Endereçamento IP.
+* Encaminhamento de pacotes.
+* Escolha do melhor caminho até o destino.
+
+**Protocolos:**
+
+* IPv4
+* IPv6
+* ICMP
+* ARP*
+* IPsec
+
+> **Observação:** No modelo TCP/IP moderno, o **ARP** costuma ser tratado como pertencente à camada de Acesso à Rede, embora algumas referências o relacionem à camada Internet por sua função de resolução de endereços.
+
+**Equipamentos:**
+
+* Roteadores.
+* Firewalls de Camada 3.
+
+**PDU:** Pacote
+
+---
+
+## 1. Acesso à Rede (Network Access ou Link)
+
+**Função:** Responsável pela comunicação com o meio físico da rede.
+
+**Responsabilidades:**
+
+* Endereçamento MAC.
+* Encapsulamento em quadros.
+* Transmissão dos bits.
+* Controle de acesso ao meio físico.
+
+**Tecnologias:**
+
+* Ethernet
+* Wi-Fi
+* PPP
+
+**Equipamentos:**
+
+* Switch.
+* Placa de rede (NIC).
+* Hub.
+* Cabos de rede.
+* Fibra óptica.
+
+**PDU:**
+
+* Quadro (Frame)
+* Bits
+
+---
+
+# Comparação entre OSI e TCP/IP
+
+| Modelo OSI   | Modelo TCP/IP |
+| ------------ | ------------- |
+| Aplicação    | Aplicação     |
+| Apresentação | Aplicação     |
+| Sessão       | Aplicação     |
+| Transporte   | Transporte    |
+| Rede         | Internet      |
+| Enlace       | Acesso à Rede |
+| Física       | Acesso à Rede |
+
+---
+
+# Fluxo da Comunicação
+
+**Envio:**
+
+Aplicação → Transporte → Internet → Acesso à Rede
+
+**Recebimento:**
+
+Acesso à Rede → Internet → Transporte → Aplicação
+
+---
+
+# TCP x UDP
+
+| Característica    | TCP                   | UDP                         |
+| ----------------- | --------------------- | --------------------------- |
+| Conexão           | Sim                   | Não                         |
+| Confiabilidade    | Alta                  | Baixa                       |
+| Controle de erros | Sim                   | Não                         |
+| Retransmissão     | Sim                   | Não                         |
+| Velocidade        | Menor                 | Maior                       |
+| Uso               | Web, e-mail, SSH, FTP | Streaming, VoIP, jogos, DNS |
+
+---
+
+# Resumo
+
+* O **TCP/IP** é o modelo de comunicação utilizado na Internet.
+* Possui **4 camadas**: Aplicação, Transporte, Internet e Acesso à Rede.
+* O **TCP** oferece uma comunicação confiável, enquanto o **UDP** prioriza velocidade e baixa latência.
+* O protocolo **IP** é responsável pelo endereçamento lógico e roteamento dos pacotes entre redes.
+* Cada camada desempenha uma função específica e trabalha em conjunto para garantir a comunicação entre dispositivos.
 
