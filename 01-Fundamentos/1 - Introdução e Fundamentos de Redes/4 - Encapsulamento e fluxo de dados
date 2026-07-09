@@ -1,1 +1,124 @@
+# Encapsulamento e Fluxo de Dados
+
+## O que é Encapsulamento?
+
+O **encapsulamento** é o processo de adicionar informações de controle (cabeçalhos e, em alguns casos, trailers) aos dados à medida que eles passam pelas camadas da pilha de protocolos durante o envio.
+
+Cada camada adiciona suas próprias informações para que o dispositivo de destino saiba como processar os dados corretamente.
+
+No computador de destino, ocorre o processo inverso, chamado **desencapsulamento**, onde cada camada remove as informações adicionadas até que os dados cheguem à aplicação.
+
+---
+
+# Como funciona o Encapsulamento
+
+Quando um usuário envia uma mensagem pela rede, ela percorre as camadas do modelo TCP/IP (ou do Modelo OSI) de cima para baixo.
+
+Em cada camada, novas informações são adicionadas:
+
+1. **Aplicação**
+
+   * A aplicação gera os dados que serão enviados.
+
+2. **Transporte**
+
+   * Adiciona um cabeçalho contendo informações como portas de origem e destino.
+   * O dado passa a ser chamado de **Segmento (TCP)** ou **Datagrama (UDP)**.
+
+3. **Internet**
+
+   * Adiciona os endereços IP de origem e destino.
+   * O dado passa a ser chamado de **Pacote**.
+
+4. **Acesso à Rede**
+
+   * Adiciona os endereços MAC de origem e destino.
+   * Cria um **Quadro (Frame)**.
+   * Um trailer (como o **FCS/CRC**) é adicionado para detecção de erros.
+
+5. **Camada Física**
+
+   * O quadro é convertido em **Bits** e transmitido pelo meio físico (cabo, fibra óptica ou Wi-Fi).
+
+---
+
+# Desencapsulamento
+
+Ao chegar ao destino, ocorre o processo inverso:
+
+1. A Camada Física recebe os bits.
+2. A Camada de Acesso à Rede remove o cabeçalho e o trailer do quadro.
+3. A Camada Internet remove o cabeçalho IP.
+4. A Camada Transporte remove o cabeçalho TCP ou UDP.
+5. A Camada Aplicação entrega os dados para o programa correspondente.
+
+---
+
+# Fluxo de Dados
+
+### Envio (Encapsulamento)
+
+```
+Aplicação
+    ↓
+Transporte
+    ↓
+Internet
+    ↓
+Acesso à Rede
+    ↓
+Física
+```
+
+---
+
+### Recebimento (Desencapsulamento)
+
+```
+Física
+    ↓
+Acesso à Rede
+    ↓
+Internet
+    ↓
+Transporte
+    ↓
+Aplicação
+```
+
+---
+
+# PDU (Protocol Data Unit)
+
+Cada camada utiliza um nome diferente para a unidade de dados.
+
+| Camada        | PDU                              |
+| ------------- | -------------------------------- |
+| Aplicação     | Dados                            |
+| Transporte    | Segmento (TCP) / Datagrama (UDP) |
+| Internet      | Pacote                           |
+| Acesso à Rede | Quadro (Frame)                   |
+| Física        | Bits                             |
+
+---
+
+# Exemplo Prático
+
+Um usuário acessa um site pelo navegador.
+
+1. O navegador cria uma requisição HTTP.
+2. O TCP adiciona as portas de origem e destino.
+3. O IP adiciona os endereços IP do computador e do servidor.
+4. A camada de Acesso à Rede adiciona os endereços MAC e cria um quadro.
+5. A Camada Física transmite os bits pela rede.
+6. O servidor recebe os bits e realiza o desencapsulamento até entregar a requisição ao servidor web.
+
+---
+
+# Resumo
+
+* **Encapsulamento:** processo de adicionar cabeçalhos (e, na camada de Acesso à Rede, também um trailer) aos dados durante o envio.
+* **Desencapsulamento:** processo de remover essas informações no dispositivo de destino.
+* Os dados percorrem as camadas da aplicação até o meio físico durante o envio e fazem o caminho inverso no recebimento.
+* O encapsulamento permite que cada camada execute sua função de forma organizada, garantindo que os dados sejam entregues corretamente ao destino.
 
