@@ -1,1 +1,194 @@
+# Modelo OSI (Open Systems Interconnection)
 
+## O que é?
+
+O **Modelo OSI** é um modelo de referência criado pela **ISO (International Organization for Standardization)** para padronizar a comunicação entre dispositivos em uma rede. Ele divide o processo de comunicação em **7 camadas**, onde cada uma possui funções específicas e se comunica apenas com as camadas adjacentes.
+
+## Objetivos
+
+* Padronizar a comunicação entre diferentes fabricantes.
+* Organizar as funções da rede em camadas.
+* Facilitar o desenvolvimento de protocolos e equipamentos.
+* Simplificar a identificação e solução de problemas de rede.
+
+---
+
+# Camada 7 – Aplicação (Application)
+
+**Função:** Fornece serviços de rede diretamente às aplicações utilizadas pelo usuário.
+
+**Responsabilidades:**
+
+* Interface entre aplicações e a rede.
+* Solicitação de serviços de rede.
+
+**Protocolos:**
+
+* HTTP
+* HTTPS
+* FTP
+* SMTP
+* POP3
+* IMAP
+* DNS
+* DHCP
+
+---
+
+# Camada 6 – Apresentação (Presentation)
+
+**Função:** Garante que os dados estejam em um formato compreensível para a aplicação de destino.
+
+**Responsabilidades:**
+
+* Conversão de formatos de dados.
+* Criptografia e descriptografia.
+* Compressão e descompressão.
+
+**Exemplos:**
+
+* SSL/TLS
+* JPEG
+* PNG
+* MP3
+* MPEG
+
+---
+
+# Camada 5 – Sessão (Session)
+
+**Função:** Estabelece, gerencia e encerra sessões de comunicação entre aplicações.
+
+**Responsabilidades:**
+
+* Controle de sessões.
+* Sincronização da comunicação.
+* Recuperação após interrupções.
+
+---
+
+# Camada 4 – Transporte (Transport)
+
+**Função:** Realiza a entrega fim a fim dos dados entre origem e destino.
+
+**Responsabilidades:**
+
+* Segmentação dos dados.
+* Controle de fluxo.
+* Controle de erros.
+* Retransmissão de pacotes perdidos.
+* Multiplexação por portas.
+
+**Protocolos:**
+
+* TCP
+* UDP
+
+**PDU:** Segmento (TCP) ou Datagrama (UDP)
+
+---
+
+# Camada 3 – Rede (Network)
+
+**Função:** Realiza o roteamento dos pacotes entre diferentes redes.
+
+**Responsabilidades:**
+
+* Endereçamento lógico (IP).
+* Escolha da melhor rota.
+* Encaminhamento de pacotes.
+
+**Equipamentos:**
+
+* Roteador
+* Firewall de Camada 3
+
+**Protocolos:**
+
+* IPv4
+* IPv6
+* ICMP
+* IPsec
+
+**PDU:** Pacote
+
+---
+
+# Camada 2 – Enlace de Dados (Data Link)
+
+**Função:** Garante a comunicação entre dispositivos da mesma rede física.
+
+**Responsabilidades:**
+
+* Endereçamento MAC.
+* Encapsulamento em quadros.
+* Detecção de erros (CRC).
+* Controle de acesso ao meio.
+
+**Equipamentos:**
+
+* Switch
+* Bridge
+
+**Protocolos/Tecnologias:**
+
+* Ethernet (IEEE 802.3)
+* Wi-Fi (IEEE 802.11)
+* PPP
+
+**PDU:** Quadro (Frame)
+
+---
+
+# Camada 1 – Física (Physical)
+
+**Função:** Responsável pela transmissão dos bits através do meio físico.
+
+**Responsabilidades:**
+
+* Sinais elétricos, ópticos ou de rádio.
+* Cabos e conectores.
+* Taxa de transmissão.
+* Meio físico de comunicação.
+
+**Equipamentos:**
+
+* Cabos UTP
+* Fibra óptica
+* Hub
+* Repetidor
+* Conversores de mídia
+
+**PDU:** Bits
+
+---
+
+# Resumo das Camadas
+
+| Camada | Nome         | Principal Função                      | PDU                |
+| ------ | ------------ | ------------------------------------- | ------------------ |
+| 7      | Aplicação    | Serviços para as aplicações           | Dados              |
+| 6      | Apresentação | Formatação, criptografia e compressão | Dados              |
+| 5      | Sessão       | Gerenciamento da comunicação          | Dados              |
+| 4      | Transporte   | Entrega fim a fim, portas, TCP/UDP    | Segmento/Datagrama |
+| 3      | Rede         | Endereçamento IP e roteamento         | Pacote             |
+| 2      | Enlace       | Endereço MAC e quadros                | Quadro             |
+| 1      | Física       | Transmissão dos bits                  | Bits               |
+
+---
+
+# Fluxo da Comunicação
+
+**Envio dos dados:**
+Aplicação → Apresentação → Sessão → Transporte → Rede → Enlace → Física
+
+**Recebimento dos dados:**
+Física → Enlace → Rede → Transporte → Sessão → Apresentação → Aplicação
+
+---
+
+# Observações Importantes
+
+* O **Modelo OSI** é um **modelo conceitual** utilizado para estudar e compreender o funcionamento das redes de computadores.
+* Na prática, a Internet utiliza principalmente o **modelo TCP/IP**, mas o Modelo OSI continua sendo amplamente utilizado para ensino, documentação e troubleshooting.
+* Cada camada executa uma função específica e adiciona ou remove informações durante o processo de **encapsulamento** e **desencapsulamento** dos dados.
