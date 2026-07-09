@@ -1,1 +1,19 @@
+Rede de computadores é um conjunto de dispositivos conectados entre si para trocar informações e compartilhar recursos, como internet, arquivos e impressoras.
 
+Objetivos:
+- Compartilhar dados.
+- Compartilhar recursos (internet, impressoras, servidores).
+- Permitir comunicação entre dispositivos.
+
+Componentes:
+- Computadores e notebooks.
+- Switch.
+- Roteador.
+- Servidores.
+- Cabos de rede ou Wi-Fi.
+
+Como funciona?
+Os dados são enviados em pequenos pacotes pela rede até chegarem ao dispositivo de destino.
+
+Exemplo:
+Em uma empresa, vários computadores conectados a um switch acessam a internet pelo roteador e compartilham arquivos e uma impressora na mesma rede.
