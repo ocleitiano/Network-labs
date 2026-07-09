@@ -1,1 +1,137 @@
+# Broadcast, Unicast e Multicast
+
+## O que são?
+
+**Broadcast, Unicast e Multicast** são formas de transmissão de dados em uma rede, definindo como as informações são enviadas entre os dispositivos.
+
+---
+
+# Unicast
+
+## O que é?
+
+**Unicast** é a comunicação entre **um único dispositivo de origem e um único dispositivo de destino**.
+
+É o tipo de comunicação mais utilizado nas redes de computadores.
+
+### Características
+
+* Comunicação **1 para 1**.
+* Apenas o destinatário recebe os dados.
+* Utiliza um endereço IP específico de destino.
+* Maior segurança e eficiência para comunicação individual.
+
+### Exemplos
+
+* Acessar um site.
+* Enviar um e-mail.
+* Conectar via SSH.
+* Transferir um arquivo por FTP.
+
+**Representação:**
+
+```text
+Computador A ─────────► Computador B
+```
+
+---
+
+# Broadcast
+
+## O que é?
+
+**Broadcast** é a comunicação em que **um dispositivo envia dados para todos os dispositivos da mesma rede (mesmo domínio de broadcast)**.
+
+Todos os equipamentos recebem a mensagem, mas apenas aqueles que precisam da informação irão processá-la.
+
+### Características
+
+* Comunicação **1 para todos**.
+* Não atravessa roteadores por padrão.
+* Pode gerar tráfego excessivo em redes grandes.
+
+### Exemplos
+
+* Requisição ARP ("Quem possui este endereço IP?").
+* Descoberta de servidores DHCP (DHCP Discover).
+* Alguns protocolos de descoberta de dispositivos.
+
+**Representação:**
+
+```text
+                 ┌── PC 1
+                 │
+Computador A ────┼── PC 2
+                 │
+                 ├── PC 3
+                 │
+                 └── PC 4
+```
+
+**Endereço IPv4 de Broadcast:**
+
+* Broadcast limitado: **255.255.255.255**
+* Também existe o broadcast direcionado, que utiliza o último endereço de uma sub-rede (exemplo: **192.168.1.255** para a rede **192.168.1.0/24**).
+
+---
+
+# Multicast
+
+## O que é?
+
+**Multicast** é a comunicação em que **um dispositivo envia dados para um grupo específico de dispositivos**.
+
+Somente os dispositivos que participam do grupo multicast recebem os dados.
+
+### Características
+
+* Comunicação **1 para muitos**.
+* Reduz o consumo de banda em comparação ao broadcast.
+* Apenas os membros do grupo recebem o tráfego.
+
+### Exemplos
+
+* IPTV.
+* Videoconferências.
+* Transmissão de eventos ao vivo.
+* Protocolos de roteamento, como OSPF (em IPv4).
+
+**Representação:**
+
+```text
+                 ┌── PC 1 ✔
+                 │
+Computador A ────┼── PC 2 ✘
+                 │
+                 ├── PC 3 ✔
+                 │
+                 └── PC 4 ✘
+```
+
+Apenas os dispositivos participantes do grupo multicast recebem os dados.
+
+**Faixa de endereços IPv4 Multicast:**
+
+* **224.0.0.0 até 239.255.255.255** (Classe D).
+
+---
+
+# Comparação
+
+| Tipo      | Comunicação | Destino                                | Exemplo                    |
+| --------- | ----------- | -------------------------------------- | -------------------------- |
+| Unicast   | 1 → 1       | Um único dispositivo                   | Navegação na web, SSH, FTP |
+| Broadcast | 1 → Todos   | Todos os dispositivos da mesma rede    | ARP, DHCP Discover         |
+| Multicast | 1 → Grupo   | Apenas dispositivos inscritos no grupo | IPTV, videoconferência     |
+
+---
+
+# Resumo
+
+* **Unicast:** comunicação entre um emissor e um único destinatário (1 → 1).
+* **Broadcast:** comunicação de um emissor para todos os dispositivos da mesma rede (1 → Todos).
+* **Multicast:** comunicação de um emissor para um grupo específico de dispositivos (1 → Grupo).
+* O **Unicast** é o método mais utilizado na Internet.
+* O **Broadcast** é limitado ao domínio de broadcast e não é roteado por padrão.
+* O **Multicast** é mais eficiente para distribuir o mesmo conteúdo a vários dispositivos ao mesmo tempo, economizando largura de banda.
 
